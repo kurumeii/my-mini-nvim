@@ -12,7 +12,7 @@ opts.shellcmdflag =
 --   ]]
 --
 -- opts.number = false
-opts.relativenumber = false
+opts.relativenumber = true
 opts.smartcase = true
 opts.ignorecase = true
 opts.breakindent = true
