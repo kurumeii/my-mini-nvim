@@ -18,6 +18,10 @@ opts.tabstop = 2
 opts.shiftwidth = 2
 opts.cursorline = true
 opts.termguicolors = true
+opts.confirm = true
+opts.foldcolumn = '0'
+opts.foldlevelstart = 99
+opts.foldenable = true
 g.clipboard = {
 	copy = {
 		["+"] = "win32yank.exe -i --crlf",
@@ -28,3 +32,7 @@ g.clipboard = {
 		["*"] = "win32yank.exe -o --crlf",
 	},
 }
+
+vim.schedule(function ()
+	opts.clipboard = "unnamedplus"
+end)

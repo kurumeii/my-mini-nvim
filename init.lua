@@ -14,8 +14,15 @@ end
 
 require('mini.deps').setup({ path = { package = path_package } })
 
-MiniDeps.now(function() require 'plugins.essentials'.init(MiniDeps) end)
-MiniDeps.later(function() require 'plugins.lazy'.init(MiniDeps) end)
+MiniDeps.now(function()
+	require 'plugins.essentials'
+	require 'plugins.clues'
+	require 'plugins.colorschemes'
+end)
+
+MiniDeps.later(function()
+	require 'plugins.lazy'
+end)
 
 require 'options'
 require 'keymaps'
