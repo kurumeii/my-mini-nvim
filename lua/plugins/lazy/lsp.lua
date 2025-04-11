@@ -13,7 +13,7 @@ require('nvim-treesitter.configs').setup({
 	highlight = {
 		enable = true
 	},
-	ensured_installed = { "lua", "c", "vim", "vimdoc", "query", "git_rebase", "diff", "gitcommit" },
+	ensure_installed = { "lua", "vim", "vimdoc", "query", "git_rebase", "diff", "gitcommit" },
 	auto_install = true,
 })
 vim.opt.foldmethod = 'expr'
@@ -30,7 +30,6 @@ require 'mason-lspconfig'.setup({
 		'vimls',
 		'biome',
 		'ts_ls',
-		'cssls',
 		'ast_grep',
 	},
 	automatic_installation = true,

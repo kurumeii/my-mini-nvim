@@ -48,4 +48,13 @@ miniclue.setup({
 		miniclue.gen_clues.windows(),
 		miniclue.gen_clues.z(),
 	},
+	window = {
+		config = {
+			relative = 'editor',
+			row = 'auto',
+			width = vim.api.nvim_list_uis()[1]['width'],
+			col = 0,
+			border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" }
+		}
+	}
 })

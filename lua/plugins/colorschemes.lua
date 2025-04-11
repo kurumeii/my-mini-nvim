@@ -36,7 +36,9 @@ require 'mini.base16'.setup({
 		default = true
 	}
 })
-require 'ayu'.setup({})
+require 'ayu'.setup({
+	mirage = true
+})
 require 'catppuccin'.setup({
 	flavor = "auto",
 	background = {

@@ -11,8 +11,20 @@ k.set('n', '<leader>bw', '<cmd>lua MiniBufremove.wipeout()<CR>', { desc = "[Buff
 k.set('n', '<leader>bf', '<cmd>lua vim.lsp.buf.format()<cr>', {
 	desc = "[B]uffer [F]ormat"
 })
+-- Pick remap
+k.set('n', '<leader>sf', function()
+	MiniPick.builtin.files({
+		tool = 'fd',
+	})
+end, { desc = "[S]earch [F]iles" })
+
+k.set('n', '<leader>sk', function()
+	MiniPick.builtin.grep_live()
+end, { desc = "[S]earch [K]eyword" })
+-- Treesitter
+k.set('n', '<leader>tu', '<cmd>TSUpdate<CR>', {desc = "Tree-sitter Update"})
 -- Themerey remap
-k.set('n', '<leader>t', '<cmd>Themery<CR>', { desc = "Open colorscheme/theme menu" })
+-- k.set('n', '<leader>t', '<cmd>Themery<CR>', { desc = "Open colorscheme/theme menu" })
 -- Qol remap
 k.set('n', '<C-q>', '<cmd>q<CR>')
 k.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
