@@ -16,9 +16,9 @@ require('nvim-treesitter.configs').setup({
 	ensure_installed = { "lua", "vim", "vimdoc", "query", "git_rebase", "diff", "gitcommit" },
 	auto_install = true,
 })
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()lazy."
-vim.cmd([[ set nofoldenable]])
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()lazy."
+-- vim.cmd([[ set nofoldenable]])
 pm.add({
 	source = 'neovim/nvim-lspconfig',
 	depends = { 'williamboman/mason.nvim', 'williamboman/mason-lspconfig.nvim' }
